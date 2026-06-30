@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "outline";
+type ButtonVariant = "primary" | "secondary" | "outline" | "white";
 
 const baseClasses =
   "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-base font-semibold transition-colors duration-200";
@@ -10,6 +10,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   secondary: "bg-brand-blue text-white hover:bg-brand-blue-dark",
   outline:
     "border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white",
+  white: "bg-white text-brand-blue hover:bg-brand-blue-light",
 };
 
 type CommonProps = {

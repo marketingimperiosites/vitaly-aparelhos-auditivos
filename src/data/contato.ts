@@ -20,3 +20,6 @@ export const MENSAGEM_WHATSAPP_PADRAO =
 
 export const MENSAGEM_WHATSAPP_AGENDAR =
   "Olá! Vim do site da Vitaly e gostaria de agendar uma avaliação auditiva.";
+
+export const MENSAGEM_WHATSAPP_SINAIS =
+  "Olá! Notei alguns sinais de perda auditiva e gostaria de agendar uma avaliação.";
