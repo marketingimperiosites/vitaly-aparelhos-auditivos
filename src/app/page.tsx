@@ -5,6 +5,7 @@ import { Servicos } from "@/components/sections/Servicos";
 import { TesteAudicao } from "@/components/sections/TesteAudicao";
 import { MarcasParceiras } from "@/components/sections/MarcasParceiras";
 import { Faq } from "@/components/sections/Faq";
+import { Localizacao } from "@/components/sections/Localizacao";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <TesteAudicao />
       <MarcasParceiras />
       <Faq />
+      <Localizacao />
     </main>
   );
 }
