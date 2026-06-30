@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Logo } from "@/components/shared/Logo";
+import { LogoIcon } from "@/components/shared/Logo";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/layout/MobileMenu";
@@ -16,8 +16,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-gray-100 bg-white/95 backdrop-blur">
       <Container className="flex h-16 items-center justify-between sm:h-20">
-        <a href="#inicio" className="shrink-0">
-          <Logo />
+        <a href="#inicio" className="flex shrink-0 items-center gap-2">
+          <LogoIcon priority className="h-9 sm:h-11" />
+          <span className="text-xl font-bold text-brand-pink sm:text-2xl">Vitaly</span>
         </a>
 
         <nav className="hidden lg:flex lg:items-center lg:gap-8">

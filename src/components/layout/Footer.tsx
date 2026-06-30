@@ -21,7 +21,7 @@ export function Footer() {
     <footer id="contato" className="bg-brand-blue text-white">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-4">
-          <Logo variant="full" light />
+          <Logo onDark className="h-24 w-24" />
           <p className="text-sm text-white/80">
             Cuidado e tecnologia para você reconectar com quem ama.
           </p>
