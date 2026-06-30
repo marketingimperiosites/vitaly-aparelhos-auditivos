@@ -17,3 +17,6 @@ export const ENDERECO = {
 
 export const MENSAGEM_WHATSAPP_PADRAO =
   "Olá! Vim do site da Vitaly e gostaria de mais informações.";
+
+export const MENSAGEM_WHATSAPP_AGENDAR =
+  "Olá! Vim do site da Vitaly e gostaria de agendar uma avaliação auditiva.";

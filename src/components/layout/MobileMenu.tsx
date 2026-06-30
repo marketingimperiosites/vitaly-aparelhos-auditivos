@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { ITENS_NAVEGACAO } from "@/data/navegacao";
-import { MENSAGEM_WHATSAPP_PADRAO } from "@/data/contato";
+import { MENSAGEM_WHATSAPP_AGENDAR } from "@/data/contato";
 import { gerarLinkWhatsApp } from "@/lib/whatsapp";
 
 type MobileMenuProps = {
@@ -24,7 +24,7 @@ export function MobileMenu({ onNavigate }: MobileMenuProps) {
         ))}
       </ul>
       <Button
-        href={gerarLinkWhatsApp(MENSAGEM_WHATSAPP_PADRAO)}
+        href={gerarLinkWhatsApp(MENSAGEM_WHATSAPP_AGENDAR)}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-4 w-full"

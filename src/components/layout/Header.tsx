@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { ITENS_NAVEGACAO } from "@/data/navegacao";
-import { MENSAGEM_WHATSAPP_PADRAO } from "@/data/contato";
+import { MENSAGEM_WHATSAPP_AGENDAR } from "@/data/contato";
 import { gerarLinkWhatsApp } from "@/lib/whatsapp";
 
 export function Header() {
@@ -35,7 +35,7 @@ export function Header() {
 
         <div className="hidden lg:block">
           <Button
-            href={gerarLinkWhatsApp(MENSAGEM_WHATSAPP_PADRAO)}
+            href={gerarLinkWhatsApp(MENSAGEM_WHATSAPP_AGENDAR)}
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 text-sm"
