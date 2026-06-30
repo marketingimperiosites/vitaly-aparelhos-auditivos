@@ -3,7 +3,7 @@ import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 type ButtonVariant = "primary" | "secondary" | "outline";
 
 const baseClasses =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-colors duration-200";
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-base font-semibold transition-colors duration-200";
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary: "bg-brand-pink text-white hover:bg-brand-pink-dark",

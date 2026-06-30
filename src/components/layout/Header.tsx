@@ -16,9 +16,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-gray-100 bg-white/95 backdrop-blur">
       <Container className="flex h-16 items-center justify-between sm:h-20">
-        <a href="#inicio" className="flex shrink-0 items-center gap-2">
-          <LogoIcon priority className="h-9 sm:h-11" />
-          <span className="text-xl font-bold text-brand-pink sm:text-2xl">Vitaly</span>
+        <a
+          href="#inicio"
+          aria-label="Vitaly Aparelhos Auditivos — página inicial"
+          className="flex shrink-0 items-center"
+        >
+          <LogoIcon priority className="h-10 sm:h-12" />
         </a>
 
         <nav className="hidden lg:flex lg:items-center lg:gap-8">
