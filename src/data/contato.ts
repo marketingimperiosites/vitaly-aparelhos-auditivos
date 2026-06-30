@@ -3,8 +3,8 @@ export const TELEFONE_EXIBICAO = "(62) 99682-5312";
 export const EMAIL = "vitalyaparelhosauditivos@gmail.com";
 export const INSTAGRAM_URL = "https://www.instagram.com/vitalyaparelhosauditivos/";
 
-// TODO: confirmar com o cliente o link exato da página do Facebook.
-export const FACEBOOK_URL = "";
+export const FACEBOOK_URL =
+  "https://www.facebook.com/people/Vitaly-Aparelhos-Auditivos/61585123667732/";
 
 export const ENDERECO = {
   linha1: "Rua T28, nº 1063, sala 10",

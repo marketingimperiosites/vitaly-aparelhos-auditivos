@@ -6,7 +6,7 @@ import { MENSAGEM_WHATSAPP_PADRAO } from "@/data/contato";
 
 export default function Home() {
   return (
-    <main className="flex flex-1 items-center py-24">
+    <main id="inicio" className="flex flex-1 items-center py-24">
       <Container>
         <SectionHeading
           eyebrow="Vitaly Aparelhos Auditivos"
