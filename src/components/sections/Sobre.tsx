@@ -54,13 +54,19 @@ export function Sobre() {
         </div>
 
         <div className="grid w-full gap-6 sm:grid-cols-3">
-          {DESTAQUES.map(({ icon: Icon, titulo, descricao }) => (
+          {DESTAQUES.map(({ icon: Icon, titulo, descricao }, index) => (
             <div
               key={titulo}
-              className="flex flex-col items-center gap-3 rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm"
+              className="flex flex-col items-center gap-3 rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue-light text-brand-blue">
-                <Icon size={24} />
+              <span
+                className={`flex h-[60px] w-[60px] items-center justify-center rounded-2xl text-white shadow-md ${
+                  index % 2 === 0
+                    ? "bg-gradient-to-br from-brand-blue to-brand-blue-dark"
+                    : "bg-gradient-to-br from-brand-pink to-brand-pink-dark"
+                }`}
+              >
+                <Icon size={30} strokeWidth={2.25} />
               </span>
               <h3 className="font-semibold text-brand-blue">{titulo}</h3>
               <p className="text-sm text-gray-600">{descricao}</p>

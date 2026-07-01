@@ -13,8 +13,12 @@ export function Servicos() {
           subtitle="Tudo o que você precisa para recuperar sua audição e qualidade de vida, em um só lugar."
         />
         <div className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICOS.map((servico) => (
-            <ServicoCard key={servico.titulo} {...servico} />
+          {SERVICOS.map((servico, index) => (
+            <ServicoCard
+              key={servico.titulo}
+              {...servico}
+              variante={index % 2 === 0 ? "pink" : "blue"}
+            />
           ))}
         </div>
       </Container>

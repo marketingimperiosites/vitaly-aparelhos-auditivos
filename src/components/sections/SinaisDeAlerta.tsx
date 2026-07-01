@@ -35,10 +35,10 @@ export function SinaisDeAlerta() {
           {SINAIS.map(({ icon: Icon, texto }) => (
             <div
               key={texto}
-              className="flex flex-col items-center gap-4 rounded-2xl bg-white/10 p-6 text-center"
+              className="flex flex-col items-center gap-4 rounded-2xl bg-white/10 p-6 text-center transition-all duration-200 hover:-translate-y-1 hover:bg-white/15"
             >
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-brand-pink">
-                <Icon size={26} />
+              <span className="flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-white text-brand-pink shadow-lg">
+                <Icon size={33} strokeWidth={2.25} />
               </span>
               <p className="text-sm font-medium text-white">{texto}</p>
             </div>
