@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloatingButton } from "@/components/shared/WhatsAppFloatingButton";
+import { SITE_NAME, SITE_URL } from "@/lib/constants";
+import { gerarJsonLdLocalBusiness } from "@/lib/seo";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -11,10 +13,47 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
+const DESCRICAO_SITE =
+  "Clínica de aparelhos auditivos em Goiânia. Avaliação auditiva, adaptação e acompanhamento contínuo com fonoaudióloga especializada há mais de 10 anos.";
+
 export const metadata: Metadata = {
-  title: "Vitaly Aparelhos Auditivos",
-  description:
-    "Clínica de aparelhos auditivos em Goiânia. Avaliação auditiva, adaptação e acompanhamento com fonoaudióloga especializada.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} | Avaliação e adaptação de aparelhos auditivos em Goiânia`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DESCRICAO_SITE,
+  keywords: [
+    "aparelho auditivo",
+    "fonoaudióloga",
+    "perda auditiva",
+    "avaliação auditiva",
+    "zumbido",
+    "Goiânia",
+    "Setor Bueno",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: `${SITE_NAME} | Avaliação e adaptação de aparelhos auditivos em Goiânia`,
+    description: DESCRICAO_SITE,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "pt_BR",
+    type: "website",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: SITE_NAME }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} | Avaliação e adaptação de aparelhos auditivos em Goiânia`,
+    description: DESCRICAO_SITE,
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -22,9 +61,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = gerarJsonLdLocalBusiness();
+
   return (
     <html lang="pt-BR" className={`${poppins.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Header />
         {children}
         <Footer />
