@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { HeartHandshake } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -11,7 +12,8 @@ export function Hero() {
       id="inicio"
       className="relative overflow-hidden bg-gradient-to-b from-brand-blue-light/60 via-white to-white"
     >
-      <div className="pointer-events-none absolute inset-0">
+      {/* Fundo decorativo — usado em mobile/tablet até termos uma imagem própria para essas telas */}
+      <div className="pointer-events-none absolute inset-0 lg:hidden">
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-pink/20 blur-3xl" />
         <div className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-brand-blue/20 blur-3xl" />
         <svg
@@ -28,7 +30,19 @@ export function Hero() {
         </svg>
       </div>
 
-      <Container className="relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:py-28">
+      {/* Fundo fotográfico — desktop por enquanto; versão mobile entra quando o cliente enviar */}
+      <div className="absolute inset-0 hidden lg:block">
+        <Image
+          src="/hero-vitaly-2.png"
+          alt=""
+          fill
+          priority
+          sizes="(min-width: 1024px) 100vw, 1px"
+          className="object-cover object-right-top"
+        />
+      </div>
+
+      <Container className="relative grid items-center gap-12 py-16 sm:py-20 lg:min-h-[600px] lg:grid-cols-2 lg:py-28">
         <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
           <span className="inline-flex items-center gap-2 rounded-full bg-brand-pink-light px-4 py-1.5 text-sm font-semibold text-brand-pink-dark">
             <HeartHandshake size={16} />
@@ -59,7 +73,8 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        {/* Logo em destaque — só mobile/tablet, no desktop a foto de fundo já traz a logo */}
+        <div className="flex justify-center lg:hidden">
           <div className="relative flex h-64 w-64 items-center justify-center sm:h-80 sm:w-80">
             <svg
               className="absolute inset-0 h-full w-full text-brand-pink/15"
