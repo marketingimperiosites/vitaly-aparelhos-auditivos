@@ -14,10 +14,10 @@ export function Logo({ onDark = false, priority = false, className = "h-16 w-16"
       } ${className}`}
     >
       <Image
-        src="/logo/vitaly-logo.jpg"
+        src="/logo/vitaly-logo-transparente.png"
         alt="Vitaly Aparelhos Auditivos"
-        width={640}
-        height={640}
+        width={512}
+        height={512}
         priority={priority}
         className="h-full w-full object-contain"
       />
