@@ -29,10 +29,10 @@ export function Sobre() {
           <SectionHeading
             align="left"
             eyebrow="Sobre a Vitaly"
-            title="Uma fonoaudióloga que devolve mais do que audição"
+            title="Cuidado que vai além da audição"
           />
 
-          <div className="flex flex-col gap-4 text-base text-gray-600 sm:text-lg">
+          <div className="flex flex-col gap-4 text-sm text-gray-600">
             <p>
               A Vitaly nasceu do sonho da fonoaudióloga Lauana Lima da Cruz,
               que iniciou seu trabalho na adaptação de aparelhos auditivos há
