@@ -19,9 +19,9 @@ export function Footer() {
 
   return (
     <footer id="contato" className="bg-brand-blue text-white">
-      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-3">
         <div className="flex flex-col gap-4">
-          <Logo onDark className="h-24 w-24" />
+          <Logo onDark className="h-48 w-48" />
           <p className="text-sm text-white/80">
             Cuidado e tecnologia para você reconectar com quem ama.
           </p>
@@ -62,39 +62,41 @@ export function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-brand-pink-light">
-            Contato
-          </h3>
-          <ul className="flex flex-col gap-3 text-sm text-white/80">
-            <li className="flex items-start gap-2">
-              <Phone size={18} className="mt-0.5 shrink-0" />
-              <a
-                href={gerarLinkWhatsApp(MENSAGEM_WHATSAPP_PADRAO)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                {TELEFONE_EXIBICAO}
-              </a>
-            </li>
-            <li className="flex items-start gap-2">
-              <Mail size={18} className="mt-0.5 shrink-0" />
-              <a href={`mailto:${EMAIL}`} className="hover:text-white">
-                {EMAIL}
-              </a>
-            </li>
-          </ul>
-        </div>
+        <div className="flex flex-col gap-8">
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-brand-pink-light">
+              Contato
+            </h3>
+            <ul className="flex flex-col gap-3 text-sm text-white/80">
+              <li className="flex items-start gap-2">
+                <Phone size={18} className="mt-0.5 shrink-0" />
+                <a
+                  href={gerarLinkWhatsApp(MENSAGEM_WHATSAPP_PADRAO)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  {TELEFONE_EXIBICAO}
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <Mail size={18} className="mt-0.5 shrink-0" />
+                <a href={`mailto:${EMAIL}`} className="hover:text-white">
+                  {EMAIL}
+                </a>
+              </li>
+            </ul>
+          </div>
 
-        <div>
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-brand-pink-light">
-            Endereço
-          </h3>
-          <p className="flex items-start gap-2 text-sm text-white/80">
-            <MapPin size={18} className="mt-0.5 shrink-0" />
-            <span>{ENDERECO.completo}</span>
-          </p>
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-brand-pink-light">
+              Endereço
+            </h3>
+            <p className="flex items-start gap-2 text-sm text-white/80">
+              <MapPin size={18} className="mt-0.5 shrink-0" />
+              <span>{ENDERECO.completo}</span>
+            </p>
+          </div>
         </div>
       </Container>
 
