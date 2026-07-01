@@ -16,7 +16,7 @@ export function Localizacao() {
       <Container className="flex flex-col items-center gap-10">
         <SectionHeading eyebrow="Onde estamos" title="Venha nos visitar" />
 
-        <div className="grid w-full gap-6 lg:grid-cols-[1fr_1.4fr] lg:items-stretch">
+        <div className="grid w-full gap-6 lg:grid-cols-2 lg:items-stretch">
           <div className="flex flex-col justify-center gap-5 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <div className="flex flex-col gap-3">
               <span className="flex h-[60px] w-[60px] items-center justify-center rounded-2xl bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white shadow-md">
