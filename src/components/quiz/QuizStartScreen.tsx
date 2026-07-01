@@ -9,8 +9,8 @@ type QuizStartScreenProps = {
 export function QuizStartScreen({ onIniciar, totalPerguntas }: QuizStartScreenProps) {
   return (
     <div className="flex flex-col items-center gap-6 rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm sm:p-10">
-      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-pink-light text-brand-pink">
-        <ClipboardList size={28} />
+      <span className="flex h-[60px] w-[60px] items-center justify-center rounded-2xl bg-gradient-to-br from-brand-pink to-brand-pink-dark text-white shadow-md">
+        <ClipboardList size={30} strokeWidth={2.25} />
       </span>
       <div className="flex flex-col gap-2">
         <h3 className="text-xl font-semibold text-brand-blue">

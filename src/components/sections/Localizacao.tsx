@@ -19,8 +19,8 @@ export function Localizacao() {
         <div className="grid w-full gap-6 lg:grid-cols-[1fr_1.4fr] lg:items-stretch">
           <div className="flex flex-col justify-center gap-5 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <div className="flex flex-col gap-3">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-pink-light text-brand-pink">
-                <MapPin size={24} />
+              <span className="flex h-[60px] w-[60px] items-center justify-center rounded-2xl bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white shadow-md">
+                <MapPin size={30} strokeWidth={2.25} />
               </span>
               <p className="text-base text-gray-700">{ENDERECO.completo}</p>
               <a
@@ -39,16 +39,20 @@ export function Localizacao() {
                 href={gerarLinkWhatsApp(MENSAGEM_WHATSAPP_PADRAO)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-brand-pink"
+                className="flex items-center gap-3 hover:text-brand-pink"
               >
-                <Phone size={18} className="shrink-0 text-brand-blue" />
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-pink to-brand-pink-dark text-white shadow-sm">
+                  <Phone size={20} strokeWidth={2.25} />
+                </span>
                 {TELEFONE_EXIBICAO}
               </a>
               <a
                 href={`mailto:${EMAIL}`}
-                className="flex items-center gap-2 hover:text-brand-pink"
+                className="flex items-center gap-3 hover:text-brand-pink"
               >
-                <Mail size={18} className="shrink-0 text-brand-blue" />
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-pink to-brand-pink-dark text-white shadow-sm">
+                  <Mail size={20} strokeWidth={2.25} />
+                </span>
                 {EMAIL}
               </a>
             </div>
