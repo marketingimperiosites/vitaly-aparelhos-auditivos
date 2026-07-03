@@ -11,7 +11,7 @@ export function MarcasParceiras() {
           eyebrow="Parceiros"
           title="Trabalhamos com as melhores marcas do mercado"
         />
-        <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-4">
+        <div className="mx-auto grid w-full max-w-2xl grid-cols-1 gap-6 sm:grid-cols-3">
           {MARCAS_PARCEIRAS.map((marca) => (
             <BrandLogoPlaceholder key={marca.id} {...marca} />
           ))}

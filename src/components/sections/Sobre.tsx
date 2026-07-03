@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { Heart, Sparkles, Users } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Logo } from "@/components/shared/Logo";
 
 const DESTAQUES = [
   {
@@ -79,8 +79,14 @@ export function Sobre() {
 
         <div className="flex justify-center lg:justify-end">
           <div className="flex w-full max-w-md flex-col items-center gap-4">
-            <div className="flex aspect-[4/5] w-full items-center justify-center rounded-3xl border border-gray-100 bg-gradient-to-br from-brand-blue-light via-white to-brand-pink-light p-12 shadow-sm">
-              <Logo className="h-40 w-40" />
+            <div className="relative aspect-[2/3] w-full overflow-hidden rounded-3xl border border-gray-100 shadow-sm">
+              <Image
+                src="/sobre/lauana.jpg"
+                alt="Lauana Lima da Cruz, fonoaudióloga responsável pela Vitaly"
+                fill
+                sizes="(min-width: 1024px) 448px, 100vw"
+                className="object-cover"
+              />
             </div>
             <p className="text-center text-sm text-gray-500">
               Lauana Lima da Cruz — Fonoaudióloga responsável
