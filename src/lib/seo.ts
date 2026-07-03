@@ -1,4 +1,5 @@
 import { EMAIL, ENDERECO, FACEBOOK_URL, INSTAGRAM_URL, TELEFONE_EXIBICAO } from "@/data/contato";
+import { NOTA_MEDIA_GOOGLE, TOTAL_AVALIACOES_GOOGLE } from "@/data/avaliacoes";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 
 export function gerarJsonLdLocalBusiness() {
@@ -18,6 +19,11 @@ export function gerarJsonLdLocalBusiness() {
       addressLocality: ENDERECO.cidade,
       addressRegion: ENDERECO.uf,
       addressCountry: "BR",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: NOTA_MEDIA_GOOGLE,
+      reviewCount: TOTAL_AVALIACOES_GOOGLE,
     },
     sameAs: [INSTAGRAM_URL, FACEBOOK_URL].filter(Boolean),
   };

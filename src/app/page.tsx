@@ -4,6 +4,7 @@ import { SinaisDeAlerta } from "@/components/sections/SinaisDeAlerta";
 import { Servicos } from "@/components/sections/Servicos";
 import { TesteAudicao } from "@/components/sections/TesteAudicao";
 import { MarcasParceiras } from "@/components/sections/MarcasParceiras";
+import { Avaliacoes } from "@/components/sections/Avaliacoes";
 import { Faq } from "@/components/sections/Faq";
 import { Localizacao } from "@/components/sections/Localizacao";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Servicos />
       <TesteAudicao />
       <MarcasParceiras />
+      <Avaliacoes />
       <Faq />
       <Localizacao />
     </main>
