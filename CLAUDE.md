@@ -16,7 +16,9 @@ conversão via WhatsApp para tráfego pago (Google Ads) e SEO local.
   versão atual do lucide-react não inclui mais ícones de marcas.
 - **Supabase** — reservado para quando o projeto precisar persistir dados
   (não usado ainda).
-- **Deploy**: Vercel (a conectar), repositório no GitHub.
+- **Deploy**: Vercel, conectado ao repositório no GitHub
+  (`github.com/marketingimperiosites/vitaly-aparelhos-auditivos`) — todo push
+  na branch `master` gera um novo deploy automaticamente.
 
 ## Comandos
 
@@ -50,14 +52,12 @@ npm run lint     # ESLint
 
 ## Pendências conhecidas (perguntar ao cliente)
 
-- `src/data/marcas-parceiras.ts`: nomes reais das marcas parceiras ainda
-  não definidos — está com placeholders genéricos.
-- Logo oficial (`public/logo/`) está em JPEG com fundo branco sólido, sem
-  transparência. Se o cliente enviar uma versão em PNG transparente, ela
-  pode substituir os arquivos atuais sem precisar mexer nos componentes.
-- Seção "Sobre" não tem foto da fonoaudióloga Lauana nem da clínica — usa
-  cards de destaque no lugar. Se o cliente enviar fotos, considerar
-  adicionar.
+- `public/hero-vitaly-mobile.png` já foi enviada pelo cliente mas ainda não
+  foi aplicada — o Hero só usa imagem de fundo real a partir do breakpoint
+  `lg` (desktop); no mobile ainda usa o fundo abstrato de fallback.
+- Domínio definitivo (ex: vitalyaparelhosauditivos.com.br) ainda não
+  conectado na Vercel — o site está publicado só no link provisório
+  `*.vercel.app`.
 
 ## Regras de trabalho (combinadas com o cliente)
 
