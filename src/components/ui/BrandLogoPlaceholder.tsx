@@ -10,7 +10,7 @@ export function BrandLogoPlaceholder({ nome, logoSrc }: MarcaParceira) {
           alt={`Logo ${nome}`}
           width={200}
           height={80}
-          className="h-auto max-h-16 w-auto object-contain"
+          className="h-auto max-h-16 w-auto max-w-full object-contain"
         />
       </div>
     );
