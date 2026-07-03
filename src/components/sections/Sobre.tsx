@@ -89,7 +89,7 @@ export function Sobre() {
               />
             </div>
             <p className="text-center text-sm text-gray-500">
-              Lauana Lima da Cruz — Fonoaudióloga responsável
+              Lauana Lima da Cruz — Fonoaudióloga responsável (CRFa 5-11529)
             </p>
           </div>
         </div>
