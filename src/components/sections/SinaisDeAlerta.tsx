@@ -8,7 +8,7 @@ import { gerarLinkWhatsApp } from "@/lib/whatsapp";
 const SINAIS = [
   { icon: Repeat2, texto: "Pedir para repetirem o que foi dito" },
   { icon: Tv, texto: "Aumentar o volume da TV com frequência" },
-  { icon: Users, texto: "Ter dificuldade para entender em ambientes ruidosos" },
+  { icon: Users, texto: "Dificuldade para entender em ambientes ruidosos" },
   { icon: EarOff, texto: "Sentir o ouvido tampado com frequência" },
   { icon: BellOff, texto: "Não perceber sons como telefone ou campainha" },
 ];
