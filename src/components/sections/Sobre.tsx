@@ -84,12 +84,16 @@ export function Sobre() {
                 className="h-full w-full"
                 fotos={[
                   {
-                    src: "/sobre/lauana.jpg",
+                    src: "/sobre/lauana-2.jpg",
                     alt: "Lauana Lima da Cruz, fonoaudióloga responsável pela Vitaly",
                   },
                   {
                     src: "/sobre/clinica.jpg",
                     alt: "Ambiente da clínica Vitaly Aparelhos Auditivos",
+                  },
+                  {
+                    src: "/sobre/consultorio.jpg",
+                    alt: "Área de espera da clínica Vitaly Aparelhos Auditivos",
                   },
                 ]}
               />
