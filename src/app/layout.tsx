@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloatingButton } from "@/components/shared/WhatsAppFloatingButton";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
+import { GA_ID, GTM_ID } from "@/lib/analytics";
 import { gerarJsonLdLocalBusiness } from "@/lib/seo";
 
 const poppins = Poppins({
@@ -66,6 +68,16 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${poppins.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <GoogleTagManager gtmId={GTM_ID} />
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -74,6 +86,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppFloatingButton />
+        <GoogleAnalytics gaId={GA_ID} />
       </body>
     </html>
   );
