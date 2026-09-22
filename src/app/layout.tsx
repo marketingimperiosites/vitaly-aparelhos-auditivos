@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloatingButton } from "@/components/shared/WhatsAppFloatingButton";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
-import { GA_ID, GTM_ID } from "@/lib/analytics";
+import { GTM_ID } from "@/lib/analytics";
 import { gerarJsonLdLocalBusiness } from "@/lib/seo";
 
 const poppins = Poppins({
@@ -86,7 +86,6 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppFloatingButton />
-        <GoogleAnalytics gaId={GA_ID} />
       </body>
     </html>
   );
